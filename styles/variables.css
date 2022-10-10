@@ -1,0 +1,12 @@
+html,
+*,
+*::before,
+*::after {
+  --color-white: #fff;
+  --color-gray: #c4c4c4;
+  --color-black: #0c0c0c;
+  --color-black-light: #232323;
+  --color-red: #fe142f;
+  --color-red-light: #fe4f63;
+  --color-green: #279e7a;
+}

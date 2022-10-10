@@ -9,12 +9,13 @@
 
 
   <title>GameOn – Réservation</title>
-  <meta name="description" content="Page d'inscription à l’événement GameOn le plus grand Marathon de jeux videos de France">
+  <meta name="description"
+    content="Page d'inscription à l’événement GameOn le plus grand Marathon de jeux videos de France">
   <meta name="keywords" content="gameOn, Gaming, reservation, event, booking, video games">
   <meta name="author" content="GameOn">
 
   <link rel="icon" type="image/svg+xml" href="ressources/favicon.png" />
-  <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="main.css">
   <link rel="apple-touch-icon" href="touch-icon-iphone.png">
 
   <script src="modal.js" defer></script>
@@ -23,7 +24,39 @@
 
 <body>
   <!-- your content here... -->
-  <p>Hello world</p>
+  <header class="lp-header">
+    <nav class="navigation">
+      <img src="ressources/Logo.png" alt="logo-gameOn" class="logo">
+      <div class="hamburger-menu">
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a class="selected" href="#">Accueil</a></li>
+          <li><a href="#">Détails de l'évènement</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Évènements passés</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrapper-text">
+        <h1 class="main-title">Marathon national <br> de jeux vidéos</h1>
+        <p class="teaser-text">Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux réservations... Places
+          limitées !</p>
+        <button class="inscription-btns">Je m'inscris</button>
+      </div>
+      <img src="ressources/bg_img.jpg" alt="Joueuse gameOn qui celebre la victoire">
+      <button class="inscription-btns mobile">Je m'inscris</button>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-copyright">Copyright 2014 - 2020, GameOn Inc.</p>
+  </footer>
 
 </body>
 
