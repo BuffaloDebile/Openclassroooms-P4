@@ -1,0 +1,11 @@
+span#hamburger.hamburger-open::before {
+  transform: rotate(45deg) scale(0.5) translate3d(20px, -10px, 0);
+}
+
+span#hamburger.hamburger-open::after {
+  transform: rotate(-45deg) scale(0.5) translate3d(18px, 10px, 0);
+}
+
+div.nav-links.opened {
+  transform: translateX(0);
+}

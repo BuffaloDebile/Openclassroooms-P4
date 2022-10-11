@@ -9,4 +9,10 @@ html,
   --color-red: #fe142f;
   --color-red-light: #fe4f63;
   --color-green: #279e7a;
+
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-xl-2: 1536px;
 }
