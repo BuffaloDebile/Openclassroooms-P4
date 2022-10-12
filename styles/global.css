@@ -1,5 +1,5 @@
 header.lp-header {
-  padding: 50px 15px;
+  padding: 50px 15px 70px 15px;
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
@@ -13,6 +13,7 @@ nav.navigation {
 
 nav.navigation div.hamburger-menu {
   margin: 0 0 0 30px;
+  display: none;
 }
 
 span#hamburger {
@@ -84,4 +85,64 @@ div.nav-links a:hover {
 div.nav-links a.selected {
   background: var(--color-red);
   color: var(--color-white);
+}
+
+/* Section Hero */
+
+section.hero {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 0 15px;
+  min-height: 600px;
+}
+
+section.hero img {
+  display: block;
+  padding: 0;
+  width: 150%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 0 15px 15px 0;
+}
+
+div.wrapper-text {
+  position: relative;
+  min-width: 510px;
+  padding: 50px 55px 70px 55px;
+  background: var(--color-black-light);
+  color: var(--color-white);
+  line-height: 1.3;
+  width: 1rem;
+  border-radius: 15px 0 0 15px;
+}
+
+h1.main-title {
+  font-size: clamp(30px, 30px + 4vw, 100px);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+p.teaser-text {
+  margin-top: 80px;
+  font-size: 24px;
+}
+
+div.wrapper-text button {
+  margin-top: 70px;
+}
+
+button.inscription-btns {
+  padding: 10px 25px;
+  font-size: 25px;
+  font-weight: 500;
+  background: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
 }

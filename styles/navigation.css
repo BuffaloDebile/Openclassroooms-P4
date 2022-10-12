@@ -7,5 +7,5 @@ span#hamburger.hamburger-open::after {
 }
 
 div.nav-links.opened {
-  transform: translateX(0);
+  transform: translateX(-100%);
 }

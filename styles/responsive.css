@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1024px) {
+  nav.navigation div.hamburger-menu {
+    display: block;
+  }
+
   span#hamburger {
     display: block;
   }
@@ -6,13 +10,14 @@
     position: fixed;
     inset: 0;
     width: 80%;
+    left: 180%;
     height: 100%;
     place-content: center;
     background: var(--color-white);
     z-index: 4;
     box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.7);
-    transform: translateX(130%);
-      transition: transform ease-in-out 0.4s;
+    transform: translateX(0%);
+    transition: transform ease-in-out 0.4s;
   }
 
   div.nav-links ul {
