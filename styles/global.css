@@ -121,7 +121,7 @@ div.wrapper-text {
 }
 
 h1.main-title {
-  font-size: clamp(30px, 30px + 4vw, 100px);
+  font-size: clamp(30px, 30px + 5vw, 100px);
   font-weight: 500;
   white-space: nowrap;
 }
@@ -145,4 +145,20 @@ button.inscription-btns {
   border-radius: 8px;
   transition: ease-in-out 0.2s;
   cursor: pointer;
+}
+
+button.inscription-btns.mobile {
+  display: none;
+}
+
+footer {
+  padding: 65px 15px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+p.footer-copyright  {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-red);
 }
