@@ -18,12 +18,12 @@
   <link rel="stylesheet" href="main.css">
   <link rel="apple-touch-icon" href="touch-icon-iphone.png">
 
-  <script src="modal.js" defer></script>
+  <script src="app.js" defer></script>
 
 </head>
 
 <body>
-  <!-- your content here... -->
+
   <header class="lp-header">
     <nav class="navigation">
       <img src="ressources/Logo.png" alt="logo-gameOn" class="logo">
@@ -53,6 +53,108 @@
       <img src="ressources/bg_img.jpg" alt="Joueuse gameOn qui celebre la victoire">
     </section>
     <button class="inscription-btns mobile">Je m'inscris</button>
+
+    <div class="modal">
+      <div class="modal-wrapper">
+        <span class="modal-close"></span>
+        <div class="modal-body">
+          <form action="index.html" class="modal-form" autocomplete="off">
+            <div class="form-row">
+              <label for="first-name">Prénom</label>
+              <input type="text" id="first-name" name="first-name" minlength="2" required autocomplete="off">
+              <p class=" form-error-msg">Le champ est vide</p>
+            </div>
+            <div class="form-row">
+              <label for="first-name">Nom</label>
+              <input type="text" id="last-name" name="last-name" minlength="2" required autocomplete="off">
+              <p class=" form-error-msg">Le champ est vide</p>
+            </div>
+            <div class="form-row">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="adresse email" required autocomplete="off">
+              <p class=" form-error-msg">Le champ est vide</p>
+            </div>
+            <div class="form-row">
+              <label for="birthdate">Date de naissance</label>
+              <input type="date" id="birthdate" name="birthdate" autocomplete="off">
+              <p class=" form-error-msg">Le champ est vide</p>
+            </div>
+            <div class="form-row">
+              <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label>
+              <input type="number" id="quantity" name="quantity" min="0" max="99" autocomplete="off">
+              <p class=" form-error-msg">Le champ est vide</p>
+            </div>
+            <div class="form-row">
+              <label for="location">Quelles villes ?</label>
+              <div class="radio-wrapper">
+                <input type="radio" id="location-1" name="location" value="New York">
+                <label class="form-radio" for="location-1">
+                  New-York
+                </label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="location-2" name="location" value="San Francisco">
+                <label class="form-radio" for="location-2">
+                  San Francisco
+                </label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="location-3" name="location" value="Seattle">
+                <label class="form-radio" for="location-3">
+                  Seattle
+                </label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="location-4" name="location" value="Chicago">
+                <label class="form-radio" for="location-4">
+                  Chicago
+                </label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="location-5" name="location" value="Boston">
+                <label class="form-radio" for="location-5">
+                  Boston
+                </label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" id="location-6" name="location" value="Portland">
+                <label class="form-radio" for="location-6">
+                  Portland
+                </label>
+              </div>
+              <p class="form-error-msg">Une ville doit être sélectionnée</p>
+            </div>
+
+            <div class="form-row">
+              <div class="checkbox-wrapper">
+                <input class="input-checkbox" type="checkbox" id="checkbox1">
+                <label for="checkbox1">
+                  J'ai lu et accepté les conditions d'utilisation.
+                </label>
+              </div>
+
+              <div class="checkbox-wrapper">
+                <input class="input-checkbox" type="checkbox" id="checkbox2">
+                <label for="checkbox2">
+                  Je souhaite être prévenu des prochains évènements.
+                </label>
+              </div>
+              <p class="form-error-msg">Vous devez accepter les conditions d'utilisation</p>
+            </div>
+
+            <div class="form-row-success">
+
+              <h4>Merci pour votre inscription !</h4>
+
+            </div>
+
+            <button type="submit" class="inscription-btns">C'est parti !</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer>

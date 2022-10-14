@@ -82,4 +82,15 @@
   p.footer-copyright {
     text-align: center;
   }
+
+  div.modal-wrapper {
+    padding: 15px 10px;
+    max-width: calc(100% - 15px);
+  }
+
+  div.radio-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+  }
 }

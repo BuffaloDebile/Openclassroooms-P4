@@ -50,7 +50,7 @@ span#hamburger::after {
 nav.navigation img {
   max-width: 250px;
   height: 100%;
-  width: clamp(180px, 180px + 5vw, 250px);
+  width: clamp(180px, 170px + 5vw, 250px);
 }
 
 div.nav-links {
@@ -157,8 +157,8 @@ footer {
   margin: 0 auto;
 }
 
-p.footer-copyright  {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--color-red);
+p.footer-copyright {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-red);
 }
