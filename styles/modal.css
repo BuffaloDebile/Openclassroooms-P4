@@ -18,6 +18,13 @@ div.modal-wrapper {
   padding: 30px 40px;
   border-radius: 8px;
   background: var(--color-black-light);
+}
+
+div.modal-wrapper.shake {
+  animation: shake 0.4s;
+}
+
+div.modal-wrapper.open {
   animation: modalContentOpen 0.3s;
 }
 
@@ -51,11 +58,18 @@ span.modal-close::after {
   transform: translateY(-50%) rotate(-45deg);
 }
 
-form button.inscription-btns[type='submit'] {
+form button[type='submit'] {
   font-size: 20px;
   padding: 8px 60px;
-  margin: 20px auto;
+  margin: 50px auto;
   display: block;
+  font-weight: 500;
+  background: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
 }
 
 form.modal-form div.form-row {
@@ -95,7 +109,7 @@ form.modal-form input:focus {
 }
 
 form.modal-form input.input-error {
-  border: solid 2px;
+  outline: solid 2px var(--color-red);
 }
 
 form.modal-form p {
@@ -212,5 +226,13 @@ div.checkbox-wrapper input[type='checkbox']:checked {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes shake {
+  33% {
+    transform: translateX(-5px);
+  }
+  66% {
+    transform: translateX(5px);
   }
 }
