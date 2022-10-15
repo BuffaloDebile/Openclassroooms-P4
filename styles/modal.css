@@ -4,10 +4,10 @@ div.modal {
   height: 100vh;
   width: 100vw;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(17, 22, 77, 0.7);
   animation: modalBackgroundOpen 0.3s;
   z-index: 15;
-  display: block;
+  display: none;
 }
 
 div.modal-wrapper {
