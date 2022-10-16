@@ -20,20 +20,20 @@ const formRow = document.querySelectorAll('.form-row');
 const rowSuccess = document.querySelector('.form-row-success');
 const form = document.querySelector('form');
 
-console.log(formContainer.style);
+let isAnimating = false;
 
 const dateBasse = new Date(1923, 1, 01);
 const dateHaute = new Date(2004, 1, 01);
 const dateNow = new Date(Date.now());
 
 const inputsValidity = {
-  firstName: true,
-  lastName: true,
-  email: true,
+  firstName: false,
+  lastName: false,
+  email: false,
   birthDate: false,
-  gameQuantity: true,
-  inputRadio: true,
-  conditions: true,
+  gameQuantity: false,
+  inputRadio: false,
+  conditions: false,
 };
 
 const regexEmail =
@@ -146,9 +146,35 @@ function birthdayValidation() {
   }
 }
 
-function gameQuantityValidation() {}
+// inputGameQuantity.value[1] !== /[1-9]/
 
-let isAnimating = false;
+function gameQuantityValidation() {
+  if (inputGameQuantity.value > 0) {
+    inputsValidity.gameQuantity = true;
+    showValidation(inputGameQuantity, 4, true, '');
+  } else {
+    inputsValidity.gameQuantity = false;
+    showValidation(
+      inputGameQuantity,
+      4,
+      false,
+      'Désolé, dois avoir au moins participé à au moins 1 tournoi',
+    );
+  }
+}
+
+function checkCitiesInputs() {
+  var radios = document.querySelectorAll('input[type="radio"]:checked');
+  if (radios.length > 0) {
+    inputsValidity.inputRadio = true;
+    errorMsg[5].textContent = '';
+    errorMsg[5].style.display = 'none';
+  } else {
+    inputsValidity.inputRadio = false;
+    errorMsg[5].textContent = 'Sélectionnez une ville';
+    errorMsg[5].style.display = 'block';
+  }
+}
 
 function handleForm(e) {
   e.preventDefault();
@@ -165,6 +191,8 @@ function handleForm(e) {
     lastNameValidation();
     emailValidation();
     birthdayValidation();
+    gameQuantityValidation();
+    checkCitiesInputs();
 
     setTimeout(() => {
       formContainer.classList.remove('shake');
@@ -191,9 +219,16 @@ inputlastName.addEventListener('blur', lastNameValidation);
 inputlastName.addEventListener('input', lastNameValidation);
 inputEmail.addEventListener('blur', emailValidation);
 inputEmail.addEventListener('input', emailValidation);
-submitFormButton.addEventListener('click', handleForm);
 inputBirthDate.addEventListener('blur', birthdayValidation);
 inputBirthDate.addEventListener('input', birthdayValidation);
+inputGameQuantity.addEventListener('blur', gameQuantityValidation);
+inputGameQuantity.addEventListener('input', gameQuantityValidation);
+inputRadio.forEach((radio) => {
+  radio.addEventListener('blur', checkCitiesInputs);
+  radio.addEventListener('input', checkCitiesInputs);
+});
+
+submitFormButton.addEventListener('click', handleForm);
 
 // Close modal on click outside
 window.onclick = (e) => {

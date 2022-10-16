@@ -21,7 +21,7 @@ div.modal-wrapper {
 }
 
 div.modal-wrapper.shake {
-  animation: shake 0.4s;
+  animation: shake 0.4s !important;
 }
 
 div.modal-wrapper.open {
@@ -110,6 +110,7 @@ form.modal-form input:focus {
 
 form.modal-form input.input-error {
   outline: solid 2px var(--color-red);
+  transition: all 1s ease-in-out;
 }
 
 form.modal-form p {
@@ -117,6 +118,7 @@ form.modal-form p {
   font-size: 12px;
   color: var(--color-red-light);
   display: none;
+  transition: all 1s ease-in-out;
 }
 
 div.radio-wrapper {
