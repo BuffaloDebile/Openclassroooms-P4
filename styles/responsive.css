@@ -17,6 +17,11 @@
     z-index: 4;
     box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.7);
     transition: all ease-in-out 0.4s;
+    transform: translateX(100%);
+  }
+
+  div.nav-links.opened {
+    transform: translateX(-100%);
   }
 
   div.nav-links ul {

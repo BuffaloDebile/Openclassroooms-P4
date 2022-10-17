@@ -5,7 +5,3 @@ span#hamburger.hamburger-open::before {
 span#hamburger.hamburger-open::after {
   transform: rotate(-45deg) scale(0.5) translate3d(18px, 12px, 0);
 }
-
-div.nav-links.opened {
-  transform: translateX(-100%);
-}

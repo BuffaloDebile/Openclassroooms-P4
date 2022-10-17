@@ -149,7 +149,7 @@ function birthdayValidation() {
 // inputGameQuantity.value[1] !== /[1-9]/
 
 function gameQuantityValidation() {
-  if (inputGameQuantity.value > 0) {
+  if (inputGameQuantity.value[0] != 0) {
     inputsValidity.gameQuantity = true;
     showValidation(inputGameQuantity, 4, true, '');
   } else {
@@ -235,10 +235,4 @@ window.onclick = (e) => {
   if (e.target == modalForm) {
     modalForm.style.display = 'none';
   }
-};
-
-// Refresh on window resize to prevent navbar issues
-window.onresize = function () {
-  hamburgerMenu.classList.remove('opened');
-  hamburgerMenuArrow.classList.remove('hamburger-open');
 };
