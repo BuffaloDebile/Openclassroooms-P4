@@ -146,10 +146,8 @@ function birthdayValidation() {
   }
 }
 
-// inputGameQuantity.value[1] !== /[1-9]/
-
 function gameQuantityValidation() {
-  if (inputGameQuantity.value[0] != 0) {
+  if (inputGameQuantity.value[0] != 0 && inputGameQuantity.value != '') {
     inputsValidity.gameQuantity = true;
     showValidation(inputGameQuantity, 4, true, '');
   } else {
@@ -176,6 +174,18 @@ function checkCitiesInputs() {
   }
 }
 
+function checkConditionsAccepted() {
+  if (inputConditions.checked) {
+    inputsValidity.conditions = true;
+    errorMsg[6].textContent = '';
+    errorMsg[6].style.display = 'none';
+  } else {
+    inputsValidity.conditions = false;
+    errorMsg[6].textContent = "Veuillez accepter les conditions d'utilisation";
+    errorMsg[6].style.display = 'block';
+  }
+}
+
 function handleForm(e) {
   e.preventDefault();
 
@@ -193,6 +203,7 @@ function handleForm(e) {
     birthdayValidation();
     gameQuantityValidation();
     checkCitiesInputs();
+    checkConditionsAccepted();
 
     setTimeout(() => {
       formContainer.classList.remove('shake');
@@ -223,6 +234,9 @@ inputBirthDate.addEventListener('blur', birthdayValidation);
 inputBirthDate.addEventListener('input', birthdayValidation);
 inputGameQuantity.addEventListener('blur', gameQuantityValidation);
 inputGameQuantity.addEventListener('input', gameQuantityValidation);
+inputConditions.addEventListener('input', checkConditionsAccepted);
+inputConditions.addEventListener('blur', checkConditionsAccepted);
+
 inputRadio.forEach((radio) => {
   radio.addEventListener('blur', checkCitiesInputs);
   radio.addEventListener('input', checkCitiesInputs);
